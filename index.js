@@ -21,9 +21,29 @@ var val1 = 'var変数を再宣言';
 console.log(val1);
 
 const val2 = {
-  name:"じゃけぇ",
-  address:"広島"
-}
+  name: 'じゃけぇ',
+  address: '広島',
+};
 console.log(val2);
-val2.name="広島人";
+val2.name = '広島人';
 console.log(val2);
+
+const nameArr = ['田中', '山田', 'じゃけぇ'];
+
+const nameArr2 = nameArr.filter((name) => {
+  return name == '田中';
+});
+
+console.log(nameArr2);
+
+nameArr.map((name, index) => console.log(`${index + 1}番目は${name}`));
+
+const newNameArr = nameArr.map((name)=>{
+  if(name === 'じゃけぇ'){
+    return name;
+  }else{
+    return `${name}さん`
+  }
+})
+
+console.log(newNameArr);
